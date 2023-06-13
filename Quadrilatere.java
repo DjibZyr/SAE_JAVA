@@ -79,7 +79,7 @@ public class Quadrilatere extends Forme{
 
 	public void deplacer(int arg0, int arg1) {
 		
-		
+		this.dessiner();
 		
 		this.seg.get(0).deplacer(arg0,arg1);
 		this.seg.get(1).getPointArrivee().deplacer(arg0, arg1);
