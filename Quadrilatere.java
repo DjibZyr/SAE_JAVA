@@ -8,9 +8,11 @@ import ardoise.*;
 public class Quadrilatere extends Forme{
 	
 	private String nom;
-	private PointPlan p1;
-	private PointPlan p2;
-	private ArrayList<Segment> seg;
+    private PointPlan p1;
+    private PointPlan p2;
+    private PointPlan p3;
+    private PointPlan p4;
+    private ArrayList<Segment> seg;
 	
 	
 	
@@ -22,9 +24,11 @@ public class Quadrilatere extends Forme{
 	
 	public Quadrilatere(String nom, PointPlan p1,PointPlan p2) {
 		this.setNomForme(nom);
-		this.p1 = p1;
-		this.p2 = p2;
-		this.seg = new ArrayList<Segment>();
+        this.p1 = p1;
+        this.p2 = p2;
+        this.p3 = new PointPlan(0,0);
+        this.p4 = new PointPlan(0,0);
+        this.seg = new ArrayList<Segment>();
 	}
 	
 	public Quadrilatere(Quadrilatere q) {
@@ -75,7 +79,7 @@ public class Quadrilatere extends Forme{
 
 	public void deplacer(int arg0, int arg1) {
 		
-		this.dessiner();
+		
 		
 		this.seg.get(0).deplacer(arg0,arg1);
 		this.seg.get(1).getPointArrivee().deplacer(arg0, arg1);
@@ -86,8 +90,12 @@ public class Quadrilatere extends Forme{
 	
 	 public ArrayList<Segment> dessiner() {
 
-		 PointPlan p3 = new PointPlan(this.p1.getAbscisse(), this.p2.getOrdonnee());
-         PointPlan p4 = new PointPlan(this.p2.getAbscisse(), this.p1.getOrdonnee());
+		 p3.setAbscisse(this.p1.getAbscisse());
+         p3.setOrdonnee(this.p2.getOrdonnee());
+         
+         p4.setAbscisse(this.p2.getAbscisse());
+         p4.setOrdonnee(this.p1.getOrdonnee());
+         
          Segment s1 = new Segment(p1,p4);
          Segment s2 = new Segment(p1,p3);
          Segment s3 = new Segment(p3,p2);
