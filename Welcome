@@ -1,1 +1,26 @@
-Bienvenue sur ce GitHub qui retrace la SAE Java
+Bienvenue sur ce GitHub qui retrace la SAE Java.
+
+Groupe:
+SALMI Sofiane
+GUILLAUBY Djibryl
+OUCHALLAL Samia
+
+Phase 1:
+
+Dans le fichier TestP.java, on trouvera les instructions qui permettent, après une seconde, de
+déplacer toutes les formes.
+
+
+Phase 2: 
+
+Dans le diagramme UML.
+
+
+Phase 3:
+
+Erreurs générales:
+Voici les situations pouvant provoquer des erreurs:
+Coordonnées > 200 ou coordonnées < 0.
+Uniquement lors de l’initialisation, puisque par la suite, on peut déplacer les points hors de la
+fenêtre.
+Dans le fichier testArdoise.java, on trouvera une classe qui gère les exceptions.
