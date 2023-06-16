@@ -57,6 +57,7 @@ public class TestArdoise {
                 System.out.println("Erreur : " + e.getMessage());
             }
         }
+	ar.dessinerGraphique();
         scan.close();
     }
 
@@ -107,6 +108,7 @@ public class TestArdoise {
                  System.out.println("Erreur : " + e.getMessage());
              } 
              ar.dessinerGraphique();
+		scan.close();
          }
         
      } 
@@ -244,10 +246,24 @@ public class TestArdoise {
 
     }
     ar.dessinerGraphique();
+	scan.close();
 }
     
     public static void main(String[] args) {
         TestArdoise.AfficherEtoile();
-        
+
+	while (true) {
+            // Attendre 2 secondes
+            try {
+                Thread.sleep(2000);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+
+            // Appeler la méthode deplacer avec comme paramètres les formes créees au préalable
+		// exemple : ar.deplacer("GF", 20, -20);
+            
+           
+        }
     }
 }
