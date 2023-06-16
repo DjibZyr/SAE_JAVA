@@ -57,7 +57,6 @@ public class TestArdoise {
                 System.out.println("Erreur : " + e.getMessage());
             }
         }
-	ar.dessinerGraphique();
         scan.close();
     }
 
